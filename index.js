@@ -2,27 +2,29 @@ const display = document.querySelector(".display");
 const btns = document.querySelector(".buttons");
 
 class Calculator {
-  constructor() {}
+  constructor(displayResult) {
+    this.displayResult = displayResult;
+  }
 
   updateDisplay(char) {
-    display.textContent += char;
+    this.displayResult.textContent += char;
   }
 
   clearDisplay() {
-    display.textContent = "";
+    this.displayResult.textContent = "";
   }
 
   calcAndDisplay() {
     try {
-      const result = eval(display.textContent);
-      display.textContent = result;
+      const result = eval(this.displayResult.textContent);
+      this.displayResult.textContent = result;
     } catch (err) {
-      display.textContent = "Error 🪳🐔";
+      this.displayResult.textContent = "Error 🪳🐔";
     }
   }
 }
 
-const calculator1 = new Calculator();
+const calculator1 = new Calculator(display);
 
 btns.addEventListener("click", (e) => {
   if (e.target.matches("button")) {

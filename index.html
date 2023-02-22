@@ -12,10 +12,12 @@
     <div class="calculator">
       <div class="display"></div>
       <div class="buttons">
-        <button class="operator" value="+" data-action="add">+</button>
-        <button class="operator" value="-" data-action="subtract">-</button>
-        <button class="operator" value="*" data-action="multiply">*</button>
-        <button class="operator" value="/" data-action="divide">/</button>
+        <div class="buttons-row">
+          <button class="operator" value="+" data-action="add">+</button>
+          <button class="operator" value="-" data-action="subtract">-</button>
+          <button class="operator" value="*" data-action="multiply">*</button>
+          <button class="operator" value="/" data-action="divide">/</button>
+        </div>
         <button value="7">7</button>
         <button value="8">8</button>
         <button value="9">9</button>
@@ -27,8 +29,10 @@
         <button value="3">3</button>
         <button value="0">0</button>
         <button value="." data-action="decimal">.</button>
-        <button class="clear" value="C" data-action="clear">C</button>
-        <button class="calculate" value="=" data-action="calculate">=</button>
+        <div class="buttons-row">
+          <button class="clear" value="C" data-action="clear">C</button>
+          <button class="calculate" value="=" data-action="calculate">=</button>
+        </div>
       </div>
     </div>
     <script src="index.js"></script>
